@@ -3,7 +3,6 @@
 import { headerLinks } from "@/constants"
 import Link from "next/link"
 const NavItems = () => {
-    console.log(headerLinks)
     return (
         <ul className="md:flex-between flex w-full flex-col items-start gap-5 md:flex-row">
             {headerLinks.map((link, index) => {
@@ -18,6 +17,14 @@ const NavItems = () => {
 
                 </li>)
             })}
+
+            <li className="md:hidden">
+                <Link href='/contact'>
+                    Contact Us
+                </Link>
+            </li>
+
+
         </ul>
     )
 }
