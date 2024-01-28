@@ -15,24 +15,20 @@ import { RiMenu3Fill } from "react-icons/ri";
 
 const MobileNav = () => {
     const [isOpen, setOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setOpen(!isOpen);
-    };
     return (
-        <nav className="md:hidden">
-            <Sheet>
+        <nav className="md:hiddenx">
+            <Sheet open={isOpen} onOpenChange={setOpen}>
                 <SheetTrigger className="align-middle">
                     <RiMenu3Fill size={30} />
                 </SheetTrigger>
                 <SheetContent className="flex flex-col gap-6 bg-white md:hidden">
                     Faslane
                     <Separator className="border border-gray-50" />
-                    <NavItems />
+                    <NavItems setOpen={setOpen} />
                 </SheetContent>
             </Sheet>
 
-        </nav>
+        </nav >
     )
 }
 

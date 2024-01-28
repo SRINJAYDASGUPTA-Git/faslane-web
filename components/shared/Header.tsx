@@ -5,7 +5,7 @@ import MobileNav from './MobileNav'
 
 const Header = () => {
     return (
-        <header className="w-full border-b  text-xl p-2 px-4 rounded-full flex items-center justify-end bg-white top-0 sticky z-10">
+        <header className="w-full border-b  text-xl p-2 px-4 rounded-full flex items-center justify-center bg-white top-0 sticky z-10">
             <div className="flex items-center justify-between w-full px-2">
                 <Link href='/' className="w-36 ">
                     <span className="text-2xl font-bold">Faslane</span>
@@ -14,7 +14,7 @@ const Header = () => {
                     <NavItems />
                 </nav>
 
-                <div className="flex w-32 justify-end gap-3">
+                <div className="flex w-32 justify-end gap-3 md:hidden">
                     <MobileNav />
                 </div>
             </div>

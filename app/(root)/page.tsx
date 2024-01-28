@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className='flex flex-col text-black h-full w-screen'>
-      <div className="p-2 bg-[rgb(180,179,223)] bg-gradient-to-r from-[#b4b3df] to-[#fccfec] w-screen">
+    <main className='flex flex-col text-black h-full '>
+      <div className="p-2 bg-[rgb(180,179,223)] bg-gradient-to-r from-[#b4b3df] to-[#fccfec]">
         <Header />
         <div className="flex items-center justify-between p-10  px-7 md:px-20">
           <div className="flex flex-col">
@@ -17,7 +17,7 @@ export default function Home() {
               processes and drive remarkable <br />
               success.</span>
           </div>
-          <div className=' md:w-[500px]'>
+          <div className='hidden w-[500px] md:block'>
             <img src="/Business_Team.gif" alt="Business Gif" />
           </div>
         </div>
