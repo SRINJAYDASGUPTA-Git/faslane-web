@@ -21,12 +21,11 @@ export default function Home() {
             <img src="/Business_Team.gif" alt="Business Gif" />
           </div>
         </div>
-        <div className="px-3" id="services">
+        <div className="px-3 bg-[#6B6B6B] rounded-3xl text-slate-200 hover:bg-black/80 hover:scale-[1.01] transition delay-150 ease-in-out" id="services">
           <Services />
         </div >
         <Marquee text={"Unrivaled products, trust, and a seamless user experience with our clutter-free website design."} />
       </div >
-
     </main >
   );
 }
