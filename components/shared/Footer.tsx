@@ -6,18 +6,18 @@ import Link from 'next/link';
 const Footer = () => {
     return (
         <div className='flex items-center justify-center py-5'>
-            <div className='text-[#1d1d1d] flex px-20 w-[100vw] flex-col text-[24px] gap-5'>
-                <p className='text-5xl'>
+            <div className='text-[#1d1d1d] flex px-10 md:px-20 w-[100vw] flex-col text-[24px] gap-5'>
+                <p className='text-4xl'>
                     We would love to hear<br /> from you.
                 </p>
-                <div className='flex  justify-between w-full'>
+                <div className='flex flex-col md:flex-row justify-between w-full'>
                     <Link href='/contact'>
                         <Button className='w-fit rounded-full bg-white text-[#1d1d1d] hover:bg-slate-300 text-[20px] font-semibold'>
                             Become a client
                             <FaChevronRight className='ml-3' />
                         </Button>
                     </Link>
-                    <div className='flex gap-5'>
+                    <div className='flex gap-5 flex-col md:flex-row py-3'>
                         <div className='flex flex-col gap-4 text-[24px]'>
                             <span className=' font-semibold'>Contact Us</span>
                             <span>

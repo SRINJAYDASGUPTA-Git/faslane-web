@@ -13,8 +13,8 @@ const About = () => {
                     <Separator className="my-4" />
                 </div>
                 <Image src='/about.png' width='600' height='600' alt='About' />
-                <div className='flex items-center justify-center p-5 w-[85%]'>
-                    <div className='flex place-items-start justify-center gap-16 '>
+                <div className='flex flex-col md:flex-row items-center justify-center p-5 w-[85%]'>
+                    <div className='flex flex-col md:flex-row place-items-start justify-center gap-16 '>
                         <div className='flex flex-col gap-4 w-full '>
                             <p className='text-4xl'>We are <span className='font-semibold'>Faslane</span> </p>
                             <p>
@@ -36,10 +36,10 @@ const About = () => {
                 </div>
 
             </div>
-            <div className='text-3xl w-[70%] px-24 py-28'>
+            <div className='text-xl md:text-3xl w-[100%] px-12 md:px-24 py-14 md:py-28 md:w-[70%]'>
                 "At <span className="font-bold bg-gradient-to-r from-[#9747FF] via-[#6052FA] to-[#E07E71] bg-clip-text text-transparent">Faslane</span>, we prioritize trust and innovation, delivering digital solutions that exceed client expectations." <br />
-                <p className='text-right pr-24 text-[18px]'>
-                    <span className='font-semibold text-[20px]'>Arghyadip Biswas</span><br /> Founder & CEO
+                <p className='text-right pr-10 text-[12px] md:text-[18]'>
+                    <span className='font-semibold text-[15px]'>Arghyadip Biswas</span><br /> Founder & CEO
                 </p>
             </div>
 
