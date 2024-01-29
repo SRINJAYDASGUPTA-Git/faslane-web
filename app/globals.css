@@ -79,3 +79,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+.header-hidden {
+  transform: translateY(-100%); /* Adjust as needed */
+  transition: transform 0.3s ease-in-out; /* Optional transition */
+}

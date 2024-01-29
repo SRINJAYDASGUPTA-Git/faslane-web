@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Services = () => {
     return (
-        <div className="flex flex-col p-10 px-10 md:px-20 bg-[#6B6B6B] rounded-3xl text-slate-200 hover:bg-black/80 hover:scale-[1.01] transition delay-300 ease-in-out">
+        <div className="flex flex-col p-10 px-10 md:px-20 bg-[#6B6B6B] rounded-3xl text-slate-200 hover:bg-black/80 hover:scale-[1.01] transition delay-150 ease-in-out">
             <span className="font-bold text-4xl py-2">What We Serve</span>
             <span className="text-2xl mb-8">
                 As a tight-knit team of experts, we create <br />memorable and emotional websites, digital<br /> experiences, and native apps.

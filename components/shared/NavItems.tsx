@@ -7,7 +7,7 @@ const NavItems = (props: any) => {
             {headerLinks.map((link, index) => {
                 return (<li
                     key={index}
-                    className="text-primary-500 flex-center p-medium-16 white-space-nowrap"
+                    className="text-primary-500 flex items-center justify-center white-space-nowrap px-5"
                 >
                     <Link href={link.path} onClick={() => props.setOpen(false)}>
                         {link.name}
