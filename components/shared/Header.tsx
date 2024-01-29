@@ -50,7 +50,9 @@ const Header = () => {
                     <MobileNav />
                 </div>
             </div>
-            <div className="hidden md:flex md:items-center md:justify-center p-2 w-[10vw]  rounded-full text-stone-100 bg-[url('/contact-button.png')] bg-contain text-xl">Contact Us</div>
+            <Link href='/contact'>
+                <div className="hidden md:flex md:items-center md:justify-center p-2 w-[10vw]  rounded-full text-stone-100 bg-[url('/contact-button.png')] bg-contain text-xl">Contact Us</div>
+            </Link>
         </header>
     )
 }
