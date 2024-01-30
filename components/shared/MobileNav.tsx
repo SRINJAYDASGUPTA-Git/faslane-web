@@ -18,8 +18,8 @@ const MobileNav = () => {
                 <SheetTrigger className="align-middle">
                     <RiMenu3Fill size={30} />
                 </SheetTrigger>
-                <SheetContent className="flex flex-col gap-6 bg-white md:hidden">
-                    Faslane
+                <SheetContent className="flex flex-col bg-white md:hidden">
+                    <p className="text-lg font-bold">Faslane</p>
                     <Separator className="border border-gray-50" />
                     <NavItems setOpen={setOpen} />
                 </SheetContent>

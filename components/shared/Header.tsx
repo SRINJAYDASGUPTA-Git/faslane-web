@@ -36,23 +36,25 @@ const Header = () => {
     }, [controlNavbar]);
     return (
         <header
-            className={`w-full border-b text-xl p-2 px-4 rounded-full flex items-center justify-center bg-white top-0 sticky z-10 transition-transform duration-300 transform ${show ? 'translate-y-0' : '-translate-y-full'}`}
+            className={`mx-5 mt-2 border-b text-xl rounded-full ps-5 pe-3 py-2 flex bg-white top-0 sticky z-10 transition-transform duration-300 transform ${show ? 'translate-y-0' : '-translate-y-full'}`}
         >
+            <div className='w-full flex'>
             <div className="flex items-center justify-between w-full px-2">
-                <Link href='/' className="w-36 ">
+                <Link href='/' className="w-44 ">
                     <span className="text-2xl font-bold">Faslane</span>
                 </Link>
-                <nav className="md:flex md:items-center md:justify-center hidden w-full max-w-[60vw]">
+                <nav className="md:flex hidden w-full">
                     <NavItems setOpen={setOpen} />
                 </nav>
 
-                <div className="flex w-32 justify-end gap-3 md:hidden">
+                <div className="flex justify-end gap-3 md:hidden">
                     <MobileNav />
                 </div>
             </div>
             <Link href='/contact'>
-                <div className="hidden md:flex md:items-center md:justify-center p-2 w-[10vw]  rounded-full text-stone-100 bg-[url('/contact-button.png')] bg-contain text-xl">Contact Us</div>
+            <div className="hidden md:flex md:items-center md:justify-center p-2 w-[10vw] text-stone-100 bg-[url('/contact-button.png')] bg-no-repeat bg-contain text-xl">Contact Us</div>
             </Link>
+            </div>
         </header>
     )
 }
