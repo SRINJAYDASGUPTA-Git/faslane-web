@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import NavItems from './NavItems'
 import MobileNav from './MobileNav'
 import Image from 'next/image'
+import { Button } from '../ui/button'
 
 const Header = () => {
     const setOpen = () => {
@@ -42,8 +43,7 @@ const Header = () => {
             <div className='w-full flex'>
                 <div className="flex items-center justify-between w-full px-2">
                     <Link href='/' className="w-48 flex place-items-center px-3">
-                        <Image src='./icons/faslane_logo.svg' alt="Faslane Logo" height={36} width={80} />
-                        <span className="text-2xl font-bold">Faslane</span>
+                        <Image src='./icons/faslane_logo.svg' alt="Faslane Logo" height={36} width={150} />
                     </Link>
                     <nav className="md:flex hidden w-full">
                         <NavItems setOpen={setOpen} />
@@ -54,7 +54,8 @@ const Header = () => {
                     </div>
                 </div>
                 <Link href='/contact'>
-                    <div className="hidden md:flex md:items-center md:justify-center p-2 w-[10vw] text-stone-100 bg-[url('/contact-button.png')] bg-no-repeat bg-contain text-xl">Contact Us</div>
+                    <Button className="hidden md:flex md:items-center md:justify-center p-2 w-[10vw] text-stone-100 bg-[url('/contact-button-bg.jpg')] bg-cover bg-white hover:bg-white  text-xl rounded-full">
+                        <span>Contact Us</span> </Button>
                 </Link>
             </div>
         </header>
