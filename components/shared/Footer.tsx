@@ -38,7 +38,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <Separator className="border border-gray-500" />
+                <Separator className="md:hidden block border border-gray-500" />
                 <p className='text-[#1d1d1d] text-sm text-center md:text-base md:text-start'>
                 <span className='font-bold'> © Faslane 2024.</span> All rights Reserved • <span className='underline font-bold'>Privacy Policy</span>
                 </p>
