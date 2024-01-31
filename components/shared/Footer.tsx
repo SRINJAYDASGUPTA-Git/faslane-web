@@ -20,7 +20,7 @@ const Footer = () => {
                     </Link>
                     <div className='flex gap-10 flex-row py-3'>
                         <div className='w-1/2 flex flex-col gap-4 text-base pe-5' style={{ fontWeight: '600' }}>
-                            <span className='font-bold md:font-semibold text-xl md:text-lg'>Contact Us</span>
+                            <span className='font-bold text-xl'>Get in Touch</span>
                             <span>
                                 Our Email <br />
                                 <Link href="mailto:faslane.agency@gmail.com" className='underline sm: text-xs'>
@@ -29,18 +29,18 @@ const Footer = () => {
                             </span>
                         </div>
                         <div className='w-1/2 flex flex-col gap-4 text-start px-2 text-base mb-16' style={{ fontWeight: '600' }}>
-                            <span className=' font-semibold text-lg'>Follow Us</span>
+                            <span className=' font-bold text-xl'>Follow Us</span>
                             <p className='w-full flex flex-col items-start'>
-                                <Link href='https://www.facebook.com/FaslaneAgency' target='_blank' className='flex gap-1'>
-                                    <FaFacebook size={20} />
+                                <Link href='https://www.facebook.com/FaslaneAgency' target='_blank' className='flex gap-1 items-center'>
+                                    <FaFacebook size={15} />
                                     <span className='flex place-items-center gap-2'>facebook <FiArrowUpRight /></span>
                                 </Link>
-                                <Link href='' target='' className='flex gap-1'>
-                                    <FaInstagram size={20} />
+                                <Link href='' target='' className='flex gap-1 items-center'>
+                                    <FaInstagram size={15} />
                                     <span className='flex place-items-center gap-2'>instagram <FiArrowUpRight /></span>
                                 </Link>
-                                <Link href='https://www.linkedin.com/company/faslane-agency/' target='_blank' className='flex gap-1'>
-                                    <FaLinkedin size={20} />
+                                <Link href='https://www.linkedin.com/company/faslane-agency/' target='_blank' className='flex gap-1 items-center'>
+                                    <FaLinkedin size={15} />
                                     <span className='flex place-items-center gap-2'>linkedin <FiArrowUpRight /></span>
                                 </Link>
                             </p>
