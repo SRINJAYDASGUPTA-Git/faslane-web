@@ -39,7 +39,7 @@ const Header = () => {
     return (
         <header
 
-            className={`mx-5 mt-2 border-b text-xl rounded-full ps-5 pe-3 py-2 flex bg-[#07111b] top-0 sticky z-10 transition-transform duration-300 transform ${show ? 'translate-y-0' : '-translate-y-full'}`}
+            className={`mx-5 mt-2 border-b text-xl rounded-full ps-5 pe-3 py-2 flex bg-white top-0 sticky z-10 transition-transform duration-300 transform ${show ? 'translate-y-0' : '-translate-y-full'}`}
         >
             <div className='w-full flex'>
                 <div className="flex items-center justify-between w-full">
@@ -58,7 +58,7 @@ const Header = () => {
                     </div>
                 </div>
                 <Link href='/contact'>
-                    <Button className="hidden md:flex md:items-center md:justify-center p-2 w-[10vw] text-[#1d1d1d] bg-stone-200  bg-cover  hover:bg-stone-300 text-xl rounded-full">
+                    <Button className="hidden md:flex md:items-center md:justify-center p-2 w-[10vw] text-stone-200 bg-[url('/contact-button-bg.jpg')]  bg-cover  text-xl rounded-full">
                         <span>Contact Us</span> </Button>
                 </Link>
             </div>

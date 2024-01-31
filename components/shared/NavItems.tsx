@@ -12,7 +12,7 @@ const NavItems = (props: any) => {
                     <Link
                         href={link.path}
                         onClick={() => props.setOpen(false)}
-                        className="hover:text-white hover:border-b hover:border-white hover:font-bold transition ease-in-out duration-500">
+                        className="text-black hover:text-black hover:border-b hover:border-black hover:font-bold transition ease-in-out duration-500">
                         {link.name}
                     </Link>
                 </li>)
