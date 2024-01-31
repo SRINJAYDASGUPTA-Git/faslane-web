@@ -49,7 +49,7 @@ const Services = () => {
             <div
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className="flex flex-col py-10 px-5 px-14">
+            className="flex flex-col py-10 px-5 md:px-14">
             <span className="font-bold text-4xl py-2">What We Serve</span>
                <span className={`text-2xl mb-8 group transition-opacity duration-500 ease-in-out ${isHovered?'opacity-100':'opacity-0'}`}>
                As a tight-knit team of experts, we create <br />memorable and emotional websites, digital<br /> experiences, and native apps.
@@ -77,7 +77,7 @@ const Services = () => {
                <span className="text-xl mb-8">
                As a tight-knit team of experts, we create memorable and emotional websites, digital experiences, and native apps.
                </span>
-            <div className='w-full text-white flex flex-col flex-row flex-wrap justify-between'>
+            <div className='w-full text-white flex flex-col md:flex-row flex-wrap justify-between'>
             {
                 services.map((service, index) => {
                     return (

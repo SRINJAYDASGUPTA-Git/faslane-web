@@ -84,3 +84,8 @@
   transform: translateY(-100%); /* Adjust as needed */
   transition: transform 0.3s ease-in-out; /* Optional transition */
 }
+
+.contact-bg{
+  background: rgb(180,179,223);
+background: linear-gradient(142deg, rgba(180,179,223,1) 0%, rgba(252,207,236,1) 100%);
+}

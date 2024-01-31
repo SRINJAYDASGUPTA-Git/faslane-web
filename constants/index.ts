@@ -72,3 +72,15 @@ export const services = [
     icon: "/icons/web_maint.svg",
   },
 ];
+
+export const interests = [
+  'Accounts',
+  'AI Insights on Business',
+  'App Development',
+  'App Design',
+  'App Maintenance',
+  'Marketing',
+  'Web Development',
+  'Website Design',
+
+]
