@@ -2,6 +2,13 @@
 import { services } from '@/constants'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
 
 const Services = () => {
     const [isHovered, setIsHovered] = useState(false);
@@ -70,27 +77,32 @@ const Services = () => {
                 </div>
             </div>
             :
-            <div className={`px-3 mx-5 rounded-3xl text-slate-200 bg-${backgroundColor} ${scale} transition delay-150 ease-in-out overflow-y-auto h-[100vh]`} id="services">
+            <div className={`px-3 mx-5 rounded-3xl text-slate-200 bg-${backgroundColor} ${scale} transition delay-150 ease-in-out`} id="services">
             <div
             className="flex flex-col py-10 px-5">
-            <span className="font-bold text-4xl py-2">What We Serve</span>
+            <span className="font-bold text-4xl pb-5">What We Serve</span>
                <span className="text-xl mb-8">
                As a tight-knit team of experts, we create memorable and emotional websites, digital experiences, and native apps.
                </span>
-            <div className='w-full text-white flex flex-col md:flex-row flex-wrap justify-between'>
+                   
+            <Carousel className='w-[60%] ms-16'>
+            <CarouselContent className='w-full'>
             {
                 services.map((service, index) => {
                     return (
-                        <div key={index} className='w-full items-center text-center flex flex-col gap-2 mb-10'>
-                        <Image src={service.icon} alt={service.title} height={60} width={60} className='rounded-full' />
+                      <CarouselItem key={index} className='w-full flex flex-col items-center text-center gap-2'>
+                         <Image src={service.icon} alt={service.title} height={60} width={60} className='rounded-full' />
                         <span className='text-xl font-bold'>{service.title}</span>                                                        
-                        <span className='text-sm mx-10 mb-10'>{service.description}</span>
-                        </div>
+                        <span className='text-xs'>{service.description}</span>
+                      </CarouselItem>
                         )
                     })
                 }
+                     </CarouselContent>
+                     <CarouselPrevious className='bg-transparent'/>
+                     <CarouselNext className='bg-transparent'/>
+                 </Carousel>
                 </div >
-                </div>
             </div>
         )
     )
