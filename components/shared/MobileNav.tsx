@@ -16,7 +16,7 @@ const MobileNav = () => {
         <nav className="md:hiddenx">
             <Sheet open={isOpen} onOpenChange={setOpen}>
                 <SheetTrigger className="align-middle">
-                    <RiMenu3Fill size={30} />
+                    <RiMenu3Fill size={30} className="text-white" />
                 </SheetTrigger>
                 <SheetContent className="flex flex-col bg-white md:hidden">
                     <p className="text-lg font-bold">Faslane</p>
