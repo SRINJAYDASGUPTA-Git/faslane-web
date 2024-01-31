@@ -41,9 +41,9 @@ const Header = () => {
             className={`mx-5 mt-2 border-b text-xl rounded-full ps-5 pe-3 py-2 flex bg-white top-0 sticky z-10 transition-transform duration-300 transform ${show ? 'translate-y-0' : '-translate-y-full'}`}>
             <div className='w-full flex'>
                 <div className="flex items-center justify-between w-full">
-                    <div className='w-[100%] flex items-center justify-start md:w-[300px]'>
+                    <div className='w-[100%] flex items-center justify-start md:w-[240px]'>
                         <Link href='/'>
-                            <Image src='/icons/faslane_logo.png' alt="Faslane Logo" width={180} height={200} objectFit='cover' />
+                            <Image src='/icons/faslane_logo.png' alt="Faslane Logo" width={120} height={200} objectFit='cover' />
                         </Link>
                     </div>
                     <nav className="md:flex hidden w-full text-white">
