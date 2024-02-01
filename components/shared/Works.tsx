@@ -8,6 +8,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
+import Link from 'next/link'
 const Works = () => {
     const images = [
         '/cg.png',
@@ -23,6 +24,7 @@ const Works = () => {
                     <CarouselContent>
                         {images.map((src, index) => (
                             <CarouselItem key={index}>
+                                <Link href={`/about-project/${src.substring(1, 3)}`} >
                                 <div className="p-1">
                                     <Card>
                                         <CardContent className="flex items-center justify-center p-3 ">
@@ -30,6 +32,7 @@ const Works = () => {
                                         </CardContent>
                                     </Card>
                                 </div>
+                                </Link>
                             </CarouselItem>
                         ))}
                     </CarouselContent>
