@@ -26,31 +26,31 @@ export const services = [
   {
     title: "AI Insights on Business",
     description:
-      "Unlock business insights with our analytics—data-driven strategies, trend analysis, and actionable intelligence for informed decisions and sustained growth.",
+      "Leverage our advanced analytics to uncover hidden trends and unlock actionable insights. Make data-driven decisions that propel your business towards sustainable growth.",
     icon: "/icons/ai_insight.svg",
   },
   {
     title: "App Development",
     description:
-      "Crafting cutting-edge apps tailored to your vision—innovation, functionality, and user-centric design for unparalleled digital experiences.",
+      "Forge groundbreaking apps that bring your vision to life—seamlessly blending innovation, functionality, and user-centric design for transformative digital experiences.",
     icon: "/icons/app_dev.svg",
   },
   {
     title: "App Design",
     description:
-      "Transform your app with our design expertise—creativity, functionality, and user-centric interfaces for captivating digital experiences.",
+      "Unleash the full potential of your app with our award-winning design team. We create captivating, user-centric interfaces that boost engagement, conversion, and user satisfaction.",
     icon: "/icons/app_design.svg",
   },
   {
     title: "App Maintenance",
     description:
-      "Simplify app maintenance with our seamless solutions—enhancing performance, ensuring security, and providing ongoing support for optimal user experiences.",
+      "Stop scrambling with buggy apps. We simplify app maintenance, ensuring peak performance, ironclad security, and smooth user experiences that keep your customers coming back.",
     icon: "/icons/app_maint.svg",
   },
   {
     title: "Marketing",
     description:
-      "Elevate your brand with our strategic marketing—digital campaigns, data-driven insights, and impactful strategies for lasting market impact.",
+      "Launch your brand towards lasting market impact. Our strategic marketing experts deliver measurable results, fueled by cutting-edge data and impactful campaigns.",
     icon: "/icons/marketing.svg",
   },
   {
@@ -62,13 +62,13 @@ export const services = [
   {
     title: "Website Design",
     description:
-      "Revolutionize your online aesthetics with our web design—blend of creativity, functionality, and user-centric interfaces for captivating digital experiences.",
+      "Transform your online presence. We craft captivating digital experiences that boost engagement, conversion, and user satisfaction.",
     icon: "/icons/web_design.svg",
   },
   {
     title: "Website Maintenance",
     description:
-      "Simplify web maintenance with our solutions—ensuring seamless performance, security updates, and ongoing support for an ever-responsive online presence.",
+      "Leave the website worries to us. Focus on what matters. Our solutions ensure effortless website uptime, ironclad security, and expert support for a worry-free online presence.",
     icon: "/icons/web_maint.svg",
   },
 ];
