@@ -59,7 +59,7 @@ const Services = () => {
             className="flex flex-col py-10 px-5 md:px-14">
             <span className="font-bold text-4xl py-2">What We Serve</span>
                <span className={`text-2xl mb-8 group transition-opacity duration-500 ease-in-out ${isHovered?'opacity-100':'opacity-0'}`}>
-               As a tight-knit team of experts, we create <br />memorable and emotional websites, digital<br /> experiences, and native apps.
+               As a tight-knit team of experts, we create <br />impactful and evocative websites, digital<br /> experiences, and native apps.
                </span>
                <div className='w-full md:p-4 text-white flex flex-col md:flex-row flex-wrap md:justify-between'>
             {
