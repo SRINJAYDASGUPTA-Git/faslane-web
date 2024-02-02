@@ -61,9 +61,51 @@ const page = () => {
                         ))
                     
                     }
+                    <span className='text-2xl py-10 font-bold'>What We Deliver: </span>
+                    {
+                        cg[0].deliverables.map((deliverable, index) => (
+                            <p key={index} className='text-[20px] py-5'>{deliverable.title}: {deliverable.description}</p>
+                        ))
+                    }
+                    <span className='text-[20px] py-5'>
+                      {cg[0].conclusipn}
+                    </span>
                 </div>
             </div>:
-            <Image src={pc[0].img} alt='pc' width={500} height={100}/>
+            <div className='relative w-full h-[100vh] '>
+            <Image src={pc[0].img} alt='pc' fill /> 
+            <div
+                ref={divRef}
+                className={`absolute bottom-0 w-full bg-white p-8 transition-all delay-300 ease-in-out text-black rounded-xl ${activeScroll ? 'transition-none' : ''}`}
+                style={{
+                    height: activeScroll
+                      ? Math.min(window.scrollY * 0.5, maxDivHeight) + initialDivHeight
+                      : initialDivHeight,
+                  }}
+                
+             >
+                <h1 className='text-5xl py-10'>{pc[0].title}</h1>
+                <p className='text-[24px] py-10'> 
+                    {pc[0].description}
+                </p>
+                <span className='text-2xl font-bold'>Key Features: </span>
+                {
+                    pc[0].key_features.map((feature, index) => (
+                        <p key={index} className='text-[20px] py-5'>{feature.title}: {feature.description}</p>
+                    ))
+                
+                }
+                <span className='text-2xl py-10 font-bold'>What We Deliver: </span>
+                {
+                    pc[0].deliverables.map((deliverable, index) => (
+                        <p key={index} className='text-[20px] py-5'>{deliverable.title}: {deliverable.description}</p>
+                    ))
+                }
+                <span className='text-[20px] py-5'>
+                  {pc[0].conclusipn}
+                </span>
+            </div>
+        </div>
         }
     </div>
   )
