@@ -4,6 +4,7 @@ import {  z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
+import {useRouter} from "next/navigation"
 import {
     Form,
     FormControl,
@@ -17,14 +18,16 @@ import { interests } from "@/constants"
 import { useState } from "react"
 import { Textarea } from "@/components/ui/textarea"
 import { FaChevronRight } from "react-icons/fa6"
+import { redirect } from "next/navigation"
 const formSchema = z.object({
     name: z.string().min(2).max(50),
     company: z.string().min(2).max(50),
     email: z.string().email(),
-    contact: z.string().min(10).max(10),
+    contact: z.string().length(10),
     about: z.string(),
 })
 const page = () => {
+    const router = useRouter()
     const [clicked0, setClicked0] = useState(false)
     const [clicked1, setClicked1] = useState(false)
     const [clicked2, setClicked2] = useState(false)
@@ -82,6 +85,7 @@ const page = () => {
         setClicked7(false)
         setClicked8(false)
         setInterested([])
+        router.push('/contact/success')
     }
     function handleInterest(interest: string) {
         if (interested.includes(interest)) {
