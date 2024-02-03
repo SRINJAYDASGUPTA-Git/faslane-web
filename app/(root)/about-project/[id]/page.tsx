@@ -1,107 +1,81 @@
 "use client"
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
+import Link from 'next/link';
+import { IoMdClose } from "react-icons/io";
 import React, { useState, useRef, useEffect } from 'react';
 import {pc, cg} from '@/constants'
 const page = () => {
     const {id} = useParams();
-    const [activeScroll, setActiveScroll] = useState(false);
-    const divRef = useRef<HTMLDivElement>(null); // Ensure accurate type reference
-  
-    const handleScroll = () => {
-        const scrollTriggerPoint = Math.max(divRef.current!.offsetTop, 0) - window.innerHeight * 0.75;
-
-        if (window.scrollY > scrollTriggerPoint) {
-          setActiveScroll(true);
-        } else {
-          setActiveScroll(false);
-        }
-      };    
-    const handleResize = () => {
-      setActiveScroll(false); // Reset on window resize
-    };
-  
-    useEffect(() => {
-      window.addEventListener('scroll', handleScroll);
-      window.addEventListener('resize', handleResize);
-  
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []); // Run only once on component mount
-  
-    const initialDivHeight = 150; // Adjust initial height
-    const maxDivHeight = 1000; // Adjust maximum height
   
   return (
     <div>
         {
             id === 'cg' ? 
-            <div className='relative w-full h-[100vh] '>
-                <Image src={cg[0].img} alt='cg' fill /> 
-                <div
-                    ref={divRef}
-                    className={`absolute bottom-0 w-full bg-white p-8 transition-all delay-300 ease-in-out text-black rounded-xl ${activeScroll ? 'transition-none' : ''}`}
-                    style={{
-                        height: activeScroll
-                          ? Math.min(window.scrollY * 0.5, maxDivHeight) + initialDivHeight
-                          : initialDivHeight,
-                      }}
-                    
-                 >
-                    <h1 className='text-5xl py-10'>{cg[0].title}</h1>
-                    <p className='text-[24px] py-10'> 
+            <div className='w-full h-screen overflow-y-auto'>
+             <div className='flex justify-center items-end min-h-[25vh] md:min-h-[95vh] md:bg-fixed md:bg-center bg-no-repeat bg-cover' style={{backgroundImage: `url(${cg[0].img})`}}>
+             <Image src="/arrowup.gif" width={50} height={50} alt='Scroll Up Arrow'/>
+             </div>
+             <Link href="../">
+             <div className='h-fit w-fit p-2 rounded-full absolute top-5 right-10 bg-[#F5F5F5]'>
+             <IoMdClose size={20}/>
+             </div>
+             </Link>
+                <div className='p-10 md:p-20 bg-white'>
+                    <h1 className='text-3xl md:pt-10 pb-5'>The Company- {cg[0].title}</h1>
+                    <p className='text-base pb-10 text-[#4D4D4D]'> 
                         {cg[0].description}
                     </p>
-                    <span className='text-2xl font-bold'>Key Features: </span>
+                    <span className='text-lg text-[#4D4D4D] font-bold'>Key Features: </span>
                     {
                         cg[0].key_features.map((feature, index) => (
-                            <p key={index} className='text-[20px] py-5'>{feature.title}: {feature.description}</p>
+                            <p key={index} className='text-base py-2'>{feature.title}:<br/>{feature.description}</p>
                         ))
                     
                     }
-                    <span className='text-2xl py-10 font-bold'>What We Deliver: </span>
+                    <br/><br/>
+                    <span className='text-lg text-[#4D4D4D] font-bold'>What We Deliverd: </span>
                     {
                         cg[0].deliverables.map((deliverable, index) => (
-                            <p key={index} className='text-[20px] py-5'>{deliverable.title}: {deliverable.description}</p>
+                            <p key={index} className='text-base py-2'>{deliverable.title}: {deliverable.description}</p>
                         ))
                     }
-                    <span className='text-[20px] py-5'>
+                    <br/><br/>
+                    <span className='text-base'>
                       {cg[0].conclusipn}
                     </span>
                 </div>
             </div>:
-            <div className='relative w-full h-[100vh] '>
-            <Image src={pc[0].img} alt='pc' fill /> 
-            <div
-                ref={divRef}
-                className={`absolute bottom-0 w-full bg-white p-8 transition-all delay-300 ease-in-out text-black rounded-xl ${activeScroll ? 'transition-none' : ''}`}
-                style={{
-                    height: activeScroll
-                      ? Math.min(window.scrollY * 0.5, maxDivHeight) + initialDivHeight
-                      : initialDivHeight,
-                  }}
-                
-             >
-                <h1 className='text-5xl py-10'>{pc[0].title}</h1>
-                <p className='text-[24px] py-10'> 
+            <div className='w-full h-screen overflow-y-auto'>
+                 <div className='flex justify-center items-end min-h-[25vh] md:min-h-[95vh] md:bg-fixed md:bg-center bg-no-repeat bg-cover' style={{backgroundImage: `url(${pc[0].img})`}}>
+                    <Image src="/arrowup.gif" width={50} height={50} alt='Scroll Up Arrow'/>
+                 </div>
+                 <Link href="../">
+                <div className='h-fit w-fit p-2 rounded-full absolute top-5 right-10 bg-[#F5F5F5]'>
+                  <IoMdClose size={20}/>
+                </div>
+                </Link>
+                <div className='p-10 md:p-20 bg-white'>
+                <h1 className='text-3xl md:pt-10 pb-5'>The Company- {pc[0].title}</h1>
+                <p className='text-base pb-10 text-[#4D4D4D]'> 
                     {pc[0].description}
                 </p>
-                <span className='text-2xl font-bold'>Key Features: </span>
+                <span className='text-lg text-[#4D4D4D] font-bold'>Key Features: </span>
                 {
                     pc[0].key_features.map((feature, index) => (
-                        <p key={index} className='text-[20px] py-5'>{feature.title}: {feature.description}</p>
+                        <p key={index} className='text-base py-2'>{feature.title}:<br/>{feature.description}</p>
                     ))
                 
                 }
-                <span className='text-2xl py-10 font-bold'>What We Deliver: </span>
+                <br/><br/>
+                <span className='text-lg text-[#4D4D4D] font-bold'>What We Deliver: </span>
                 {
                     pc[0].deliverables.map((deliverable, index) => (
-                        <p key={index} className='text-[20px] py-5'>{deliverable.title}: {deliverable.description}</p>
+                        <p key={index} className='text-base py-2'>{deliverable.title}: {deliverable.description}</p>
                     ))
                 }
-                <span className='text-[20px] py-5'>
+                <br/><br/>
+                 <span className='text-base'>
                   {pc[0].conclusipn}
                 </span>
             </div>
