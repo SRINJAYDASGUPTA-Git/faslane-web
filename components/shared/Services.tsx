@@ -65,7 +65,7 @@ const Services = () => {
             {
                 services.map((service, index) => {
                     return (
-                        <div key={index} className='w-1/3 px-16 flex flex-col gap-2 mb-10'>
+                        <div key={index} className='w-1/4 mx-10 flex flex-col gap-2 py-10 hover:border-b hover:border-white transition ease-in-out duration-500 cursor-default'>
                         <Image src={service.icon} alt={service.title} height={60} width={60} className='rounded-full' />
                         <span className='text-xl font-bold'>{service.title}</span>                                                        
                         <span className='text-sm'>{service.description}</span>
