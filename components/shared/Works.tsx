@@ -11,12 +11,12 @@ import {
 import Link from 'next/link'
 const Works = () => {
     const images = [
-        '/cg.png',
-        '/pc.png',
+        '/cg_logo.png',
+        '/pc_logo.png',
     ]
     return (
-        <div className='bg-[#F5F5F5] rounded-3xl mx-5 my-10 p-3'>
-            <span className="text-4xl p-8 font-bold text-center bg-gradient-to-r from-[#414fa3] to-[#fa6ec8] bg-clip-text text-transparent">
+        <div className='bg-[#F5F5F5] rounded-3xl mx-5 my-10 p-10'>
+            <span className="text-4xl font-bold text-center bg-gradient-to-r from-[#414fa3] to-[#fa6ec8] bg-clip-text text-transparent">
                 Our Works
             </span>
             <div className='flex items-center justify-center p-5'>
