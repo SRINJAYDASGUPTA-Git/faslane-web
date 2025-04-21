@@ -39,7 +39,7 @@ const About = () => {
             <div className='text-xl md:text-3xl w-[100%] px-12 md:px-24 py-14 md:py-28 md:w-[70%]'>
                 "At <span className="font-bold bg-gradient-to-r from-[#9747FF] via-[#6052FA] to-[#E07E71] bg-clip-text text-transparent">Faslane</span>, we prioritize trust and innovation, delivering digital solutions that exceed client expectations." <br />
                 <p className='text-right text-[12px] md:text-[18] leading-snug'>
-                    <span className='font-semibold text-[18px]'>Arghyadip Biswas</span><br />Founder & CEO
+                    <span className='font-semibold text-[18px]'>Team <span className="font-bold bg-gradient-to-r from-[#9747FF] via-[#6052FA] to-[#E07E71] bg-clip-text text-transparent">Faslane</span>
                 </p>
             </div>
 
